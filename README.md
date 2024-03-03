@@ -12,8 +12,15 @@
 
 ## Usage
 
+### Cloning
+First, we clone the repository.
+```bash
+git clone
+```
+
 ### Compilation
 ```bash
+cd ".\My_Shell"
 gcc my_shell.c -o my_shell
 ```
 
