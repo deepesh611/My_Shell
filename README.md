@@ -15,7 +15,7 @@
 ### Cloning
 First, we clone the repository.
 ```bash
-git clone
+git clone https://github.com/deepesh611/My_Shell.git
 ```
 
 ### Compilation
