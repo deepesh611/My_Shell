@@ -12,7 +12,7 @@
 #define MAX_FILENAME_LENGTH 256
 #define BUFFER_SIZE 1024
 
-const char *root = "C:\\Users\\Deepesh";
+const char *root = "<ROOT_PATH>";
 
 
 // Function to display current working directory
