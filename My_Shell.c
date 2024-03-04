@@ -45,9 +45,18 @@ void display_prompt() {
     char cwd[MAX_FILENAME_LENGTH];
     
     if (getcwd(cwd, sizeof(cwd)) != NULL) {
-        char *username = "NerdyGamer611"; // Change this to get the actual username
-        const char *hostname = "Desktop"; // Change this to get the actual hostname
-        
+//        char *username = "NerdyGamer611"; // Change this to get the actual username
+//        const char *hostname = "Desktop"; // Change this to get the actual hostname
+        //static username
+        char bufer[256];
+        char buffer[256];
+        FILE *user = popen("whoami", "r");
+        char *username = fgets(bufer, sizeof(bufer), user);
+        pclose(user);
+        //static hostname
+        FILE *host = popen("hostname", "r");
+        char *hostname = fgets(buffer, sizeof(buffer), host);
+        pclose(host);
         // Check if the current directory is within the root directory
         if (strncmp(cwd, root, strlen(root)) == 0) {
             // Replace the root directory with "~" in the current directory path
