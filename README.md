@@ -38,6 +38,7 @@ gcc my_shell.c -o my_shell
 
 ## Contributers
 - [Deepesh Patil](https://github.com/deepesh611)
+- [Kamil](https://github.com/Gorillq)
 ## Licence
 This project is licensed under the MIT License - see the LICENSE file for details.
 You can copy and paste this content into your README.md file in your repository.
