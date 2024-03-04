@@ -45,25 +45,48 @@ void display_prompt() {
     char cwd[MAX_FILENAME_LENGTH];
     
     if (getcwd(cwd, sizeof(cwd)) != NULL) {
-        //static username && hostname
-        char username[256], hostname[256];
-        FILE *fp = popen("whoami", "r");
-        if (fp == NULL) {
-            perror("\033[31musername error\033[0m");
-            exit(EXIT_FAILURE);
+        //static username && hostname for linux
+        #if __linux__
+            char username[256], hostname[256];
+            FILE *fp = popen("whoami", "r");
+            if (fp == NULL) {
+                perror("\033[31musername error\033[0m");
+                exit(EXIT_FAILURE);
+            }
+            fgets(username, sizeof username, fp);
+            pclose(fp);
+            fp = popen("hostname", "r");
+            if (fp == NULL) {
+                perror("\033[31mhostname error\033[0m");
+                exit(EXIT_FAILURE);
         }
-        fgets(username, sizeof username, fp);
-        pclose(fp);
-        fp = popen("hostname", "r");
-        if (fp == NULL) {
-            perror("\033[31mhostname error\033[0m");
-            exit(EXIT_FAILURE);
-        }
-        fgets(hostname, sizeof hostname, fp);
-        pclose(fp);
+            fgets(hostname, sizeof hostname, fp);
+            pclose(fp);
         //delete newline character
-        strtok(username, "\n");
-        strtok(hostname, "\n");
+            strtok(username, "\n");
+            strtok(hostname, "\n");
+        #endif
+        //static username && hostname for windows(test OK)
+        #if _WIN32
+            char username[256], hostname[256];
+            FILE *fp = popen("echo %USERNAME%", "r");
+            if (fp == NULL) {
+                perror("\033[31musername error\033[0m");
+                exit(EXIT_FAILURE);
+            }
+            fgets(username, sizeof username, fp);
+            pclose(fp);
+            fp = popen("hostname", "r");
+            if (fp == NULL) {
+                perror("\033[31mhostname error\033[0m");
+                exit(EXIT_FAILURE);
+            }
+            fgets(hostname, sizeof hostname, fp);
+            pclose(fp);
+            //delete newline
+            strtok(username, "\n");
+            strtok(hostname, "\n");
+        #endif
         // Check if the current directory is within the root directory
         if (strncmp(cwd, root, strlen(root)) == 0) {
             // Replace the root directory with "~" in the current directory path
