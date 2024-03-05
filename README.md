@@ -37,7 +37,7 @@ gcc my_shell.c -o my_shell
 - `exit`: Exit the shell.
 
 ## Contributors 👥
-[Deepesh Patil](https://github.com/deepesh611)
+[Deepesh Patil](https://github.com/deepesh611)<br>
 [Kamil](https://github.com/Gorillq)
 
 ## License 📜
