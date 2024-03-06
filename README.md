@@ -21,12 +21,12 @@ git clone https://github.com/deepesh611/My_Shell.git
 ### Compilation 🛠️
 ```bash
 cd ".\My_Shell"
-gcc my_shell.c -o my_shell
+gcc My_Shell.c -o My_Shell
 ```
 
 ### Running the Shell ▶️
 ```bash
-./my_shell
+./My_Shell
 ```
 
 ## Commands 📝
