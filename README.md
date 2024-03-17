@@ -36,10 +36,6 @@ gcc My_Shell.c -o My_Shell
 - `split <filename> <num_chunks>`: Split a file into chunks.
 - `exit`: Exit the shell.
 
-## Contributors 👥
-[Deepesh Patil](https://github.com/deepesh611)<br>
-[Kamil](https://github.com/Gorillq)
-
 ## License 📜
 This project is licensed under the MIT License - see the LICENSE file for details.
 
