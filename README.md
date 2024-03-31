@@ -1,5 +1,7 @@
 # My_Shell 🐚
 
+![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
+
 Welcome to My_Shell! This is a custom shell implemented in C.
 
 ## Features 🚀
