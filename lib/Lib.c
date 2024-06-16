@@ -1,3 +1,4 @@
+// Include the necessary header files
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -8,10 +9,12 @@
 #include <fcntl.h>                  // For open, O_RDONLY, O_WRONLY, O_CREAT
 #include <errno.h>                  // For errno
 
+// Define the constants
 #define MAX_COMMAND_LENGTH 1024
 #define MAX_FILENAME_LENGTH 256
 #define BUFFER_SIZE 1024
 
+// Define the root directory
 const char *root = "<ROOT_PATH>";
 
 
@@ -134,6 +137,7 @@ void split_file(const char *filename, int num_chunks) {
 }
 
 
+// Function to display the available commands
 void display_commands(){
     printf("\n\t\t\tAvailable commands:\n");
     printf("------------------------------------------------------------------------\n");
