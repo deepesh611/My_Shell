@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "./lib/Lib.c"
+
 #define MAX_COMMAND_LENGTH 1024
 #define MAX_FILENAME_LENGTH 256
 #define BUFFER_SIZE 1024
