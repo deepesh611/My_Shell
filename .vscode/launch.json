@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Deepesh/Desktop/Codings/My_Shell",
-      "program": "c:/Users/Deepesh/Desktop/Codings/My_Shell/build/Debug/outDebug",
+      "cwd": "d:/Codings/My_Shell",
+      "program": "d:/Codings/My_Shell/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
